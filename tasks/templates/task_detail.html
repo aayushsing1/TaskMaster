@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ task.title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-100 min-h-screen flex items-center justify-center">
+
+    <!-- Container -->
+    <div class="container max-w-4xl mx-auto p-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800">{{ task.title }}</h1>
+            <a href="{% url 'task_list' %}" class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+                Back to Tasks
+            </a>
+        </div>
+
+        <!-- Task Content -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 border-t-4 border-blue-500">
+            <p class="text-gray-700 text-lg mb-6">{{ task.description }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
