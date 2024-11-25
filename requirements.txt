@@ -10,7 +10,6 @@ jwt
 psycopg==3.2.3
 psycopg2-binary
 pycparser==2.22
-PyJWT
 requests==2.32.3
 sqlparse==0.5.2
 typing_extensions==4.12.2
