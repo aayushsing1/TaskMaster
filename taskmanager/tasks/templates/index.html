@@ -1,0 +1,40 @@
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-cyan-300 bg-opacity-40 min-h-screen flex items-center justify-center">
+
+    <!-- Main Container -->
+    <div class="bg-white p-10 rounded-3xl shadow-2xl border-t-4 border-blue-500 max-w-lg w-full text-center">
+        
+        <!-- App Info Section -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-800">Welcome to TaskMaster</h1>
+            <p class="text-gray-600 mt-2 text-lg">Stay organized and productive by managing your tasks easily.</p>
+        </div>
+
+        <!-- Google Sign In Section -->
+        <div>
+            <a href="{% provider_login_url 'google' %}">
+                <button class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 px-4 rounded-lg flex items-center justify-center space-x-3 transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    <img src="https://i.postimg.cc/MTsyLyVj/google-sm.png" alt="Google Logo" class="w-6 h-6">
+                    <span class="font-semibold">Sign in with Google</span>
+                </button>
+            </a>
+        </div>
+
+        <!-- Legal Links Section -->
+        <p class="mt-6 text-gray-500 text-sm">By signing in, you agree to our <a href="#" class="text-indigo-600 hover:underline">Terms of Service</a> and <a href="#" class="text-indigo-600 hover:underline">Privacy Policy</a>.</p>
+    </div>
+
+</body>
+
+</html>
